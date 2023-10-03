@@ -11,6 +11,7 @@ from homeassistant.const import UnitOfTemperature
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType
+homeassistant.components.gateway.GatewayEntity
 # ServerActive = True
 # Serverip = '185.222.242.249'
 # Serverport = 5029
