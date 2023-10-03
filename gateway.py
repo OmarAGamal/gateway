@@ -1,7 +1,7 @@
 """Platform for Gateway integration."""
 from __future__ import annotations
-import asyncore
-import socket
+# import asyncore
+# import socket
 from homeassistant.components.gateway import (
     GatewayDeviceClass,
     GatewayEntity,
@@ -26,30 +26,30 @@ def setup_platform(
     # add_entities([ExampleSensor()])
 
 
-class EchoHandler(asyncore.dispatcher_with_send):
+# class EchoHandler(asyncore.dispatcher_with_send):
 
-    def handle_read(self):
-        data = self.recv(8192)
-        if data:
-            try:
-               print("data recieved")
-            except :
-                print("data not recieved")
-
-
-class EchoServer(asyncore.dispatcher):
-
-    def __init__(self, host, port):
-        asyncore.dispatcher.__init__(self)
-        self.create_socket()
-        self.set_reuse_addr()
-        self.bind((host, port))
-        self.listen(5)
-
-    def handle_accepted(self, sock, addr):
-        print('Incoming connection from %s' % repr(addr))
-        handler = EchoHandler(sock)
+#     def handle_read(self):
+#         data = self.recv(8192)
+#         if data:
+#             try:
+#                print("data recieved")
+#             except :
+#                 print("data not recieved")
 
 
-server = EchoServer('', 2000)
-asyncore.loop()
+# class EchoServer(asyncore.dispatcher):
+
+#     def __init__(self, host, port):
+#         asyncore.dispatcher.__init__(self)
+#         self.create_socket()
+#         self.set_reuse_addr()
+#         self.bind((host, port))
+#         self.listen(5)
+
+#     def handle_accepted(self, sock, addr):
+#         print('Incoming connection from %s' % repr(addr))
+#         handler = EchoHandler(sock)
+
+
+# server = EchoServer('', 2000)
+# asyncore.loop()
