@@ -23,6 +23,9 @@ def setup_platform(
     discovery_info: DiscoveryInfoType | None = None
 ) -> None:
     """Set up the gateway platform."""
+    gateway:{
+        "id": "642184907900342"
+    }
     # add_entities([ExampleSensor()])
 
 
