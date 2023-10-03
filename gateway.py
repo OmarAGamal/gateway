@@ -11,9 +11,9 @@ from homeassistant.const import UnitOfTemperature
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType
-ServerActive = True
-Serverip = '185.222.242.249'
-Serverport = 5029
+# ServerActive = True
+# Serverip = '185.222.242.249'
+# Serverport = 5029
 def setup_platform(
     hass: HomeAssistant,
     config: ConfigType,
